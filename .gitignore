@@ -1,0 +1,4 @@
+ovpn_tcp/
+ovpn_udp/
+results/_cache/
+results/*/source-data/

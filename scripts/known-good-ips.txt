@@ -1,0 +1,4 @@
+# Known-good endpoints: always benchmarked and ranked by Find-BestNordVPNServersLive.ps1,
+# even if automated discovery misses them.
+# Format:  IP:PORTS  # note      PORTS = single (80), range (1231-1234), or list (1231,80)
+216.183.109.22:1231-1234  # owner's daily driver (= us12603.nordvpn.com, NordVPN "Fargo")
