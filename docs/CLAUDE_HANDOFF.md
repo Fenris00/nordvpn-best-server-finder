@@ -153,3 +153,19 @@ NordVPN's Fargo servers do satisfy the geolocation meaning.
   - Bundle indexing takes ~10 minutes in PS 5.1.
   - The printed "downloaded" time is the cache file's copy time.
   - No in-tunnel throughput test.
+
+## 7. ADR-004 settled — phase 1 complete (2026-09-23)
+
+**Supersedes the "still open" item in §6.** The owner confirmed that "Fargo" means an IP that
+*geolocates* as Fargo, ND, not physical presence. The 5 NordVPN Fargo servers (including
+`.22` = us12603) satisfy it (ADR-004, now settled).
+
+The Fargo fallback tiers 1–5 were never started. They stay documented in ADR-004 as a future
+option only, for use if physical Fargo presence is ever actually required.
+
+**Phase 1 is complete.** There are no open decisions. The remaining known gaps listed in §6
+are optional improvements, not blockers:
+- the post-sweep cool-down hasn't been validated by a re-run
+- bundle indexing is slow
+- the printed "downloaded" timestamp is the cache copy time
+- there's no in-tunnel throughput test

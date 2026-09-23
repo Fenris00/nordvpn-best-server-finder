@@ -49,11 +49,20 @@ won't appear. Revisit if the API becomes reachable (ideally switch back to it).
 Chicago (Clouvider) path and latency as Chicago servers — i.e. almost certainly a virtual
 location.
 
-**Decision:** Pending — owner to decide whether "Fargo" means *geolocates to Fargo* (NordVPN
-satisfies it) or *physically exits in/near Fargo* (continue to fallback tiers 1–5).
+**Decision (settled 2026-09-23 by the owner):** "Fargo" means an IP that **geolocates as
+Fargo, ND**, not physical presence there. The 5 NordVPN Fargo servers (us12601–us12605,
+216.183.109.2/.12/.22/.32/.42, including the owner's daily driver `.22` = us12603) satisfy
+this: ipinfo.io and ip-api.com both report them as Fargo, North Dakota. Their Chicago routing
+is known and accepted; it doesn't affect the requirement.
 
-**Consequences:** Fallback research (other VPNs, proxies, Fargo VPS, local device) is paused
-until this is answered.
+**Consequences:**
+- No further Fargo research is needed. The fallback hierarchy (1. other VPN providers,
+  2. residential/mobile proxy networks, 3. Fargo/ND VPS or colo, 4. a personal device near
+  Fargo, 5. nearest real NordVPN city as a suggestion) stays documented as a **future option
+  only**.
+- Revisit it only if genuine physical Fargo presence is actually required. Geo-IP databases
+  follow the provider's declarations, so if they ever stop reporting 216.183.109.0/24 as
+  Fargo, re-check before relying on it.
 
 ## ADR-005: Discovery = official bundle by city AND by subnet, plus a manual known-good list
 
