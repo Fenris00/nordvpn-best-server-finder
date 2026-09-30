@@ -169,3 +169,36 @@ are optional improvements, not blockers:
 - bundle indexing is slow
 - the printed "downloaded" timestamp is the cache copy time
 - there's no in-tunnel throughput test
+
+## 8. Published to GitHub as a public repo (2026-10-01)
+
+**Repo is live:** https://github.com/Fenris00/nordvpn-best-server-finder — public,
+MIT-licensed, contributions open.
+
+**Scrub before publish, verified clean in history (not just current files):**
+- Windows username (~875 path occurrences across the legacy UDP-scan CSVs/txt): the
+  whole `results/udp-scan-NordVPN-Results/` folder was removed from all history
+  (`git filter-repo --path ... --invert-paths`) — it was superseded by the live scanner
+  anyway.
+- The owner's LAN gateway IP (in one report's prose): redacted in place via
+  `git filter-repo --replace-text` across all history.
+- Real email address on every commit's author/committer field (found in commit
+  metadata, not file content — outside the original grep-based search): rewritten via
+  `git filter-repo --mailmap` to the GitHub-provided noreply address. Local `user.email`
+  for this repo was also updated so future commits don't reintroduce the real one.
+- `D:\ovpn` / `D:\NordVPN` drive-letter references in doc headers and the architecture
+  tree diagram: replaced with relative wording.
+- Each pass was verified with `git log --all -p` / `git log --all --full-history`
+  returning zero matches before moving on, and two local backup bundles were kept as a
+  rollback safety net during the rewrites, then deleted once the push was confirmed good
+  on GitHub.
+- `.gitignore` was reconfirmed before push: `ovpn_tcp/`, `ovpn_udp/`, and
+  `results/_cache/` (NordVPN's shared key/cert material) were never tracked and were
+  not pushed.
+
+**This closes the project out for now.**
+
+**Standing note for any future session:** from this point on, the repo is public by
+default. There is no more "scrub before publish" grace period — every future commit is
+visible on GitHub immediately, not staged for a later cleanup pass. Treat personal info,
+internal IPs, and credentials as already-public-facing before committing, not after.
