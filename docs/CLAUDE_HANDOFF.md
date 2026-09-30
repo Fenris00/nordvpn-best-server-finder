@@ -1,4 +1,4 @@
-# CLAUDE_HANDOFF — NordVPN Best-Server Finder (D:\ovpn)
+# CLAUDE_HANDOFF — NordVPN Best-Server Finder
 
 Read this file first in any new session. Sections are appended, never rewritten; a later
 section may say "supersedes §N".

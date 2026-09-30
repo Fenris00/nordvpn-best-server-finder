@@ -52,7 +52,7 @@ away as "probably flaky" without evidence, and don't assume a fix worked without
 
 ---
 
-## Project-specific notes (D:\ovpn)
+## Project-specific notes (project root)
 
 - No CI and no test suite: this project is PowerShell scripts plus data. "Verification" means
   real measurements with timestamps, and saying plainly what wasn't measured.

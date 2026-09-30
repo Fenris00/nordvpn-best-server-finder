@@ -1,4 +1,4 @@
-# Architecture — NordVPN Best-Server Finder (D:\ovpn)
+# Architecture — NordVPN Best-Server Finder
 
 ## System overview
 
@@ -10,7 +10,7 @@ credentials.
 ## Layout
 
 ```
-D:\ovpn\
+(project root)
 ├── ovpn_tcp\     19,024 profiles (9,512 servers × .tcp + .tcp_2.6), downloaded 2026-07-28
 ├── ovpn_udp\     19,026 profiles (9,513 servers × .udp + .udp_2.6), same bundle
 ├── scripts\

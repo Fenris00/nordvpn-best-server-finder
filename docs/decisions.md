@@ -1,4 +1,4 @@
-# Architecture Decision Records — NordVPN Best-Server Finder (D:\ovpn)
+# Architecture Decision Records — NordVPN Best-Server Finder
 
 Numbers are sequential and never reused; a superseding ADR says so explicitly.
 
