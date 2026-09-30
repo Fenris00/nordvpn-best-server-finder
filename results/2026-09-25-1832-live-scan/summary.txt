@@ -1,0 +1,6 @@
+﻿NordVPN live scan  measured 2026-09-25 18:32:04Z
+Config bundle: https://downloads.nordcdn.com/configs/archives/servers/ovpn.zip (file time 2026-09-24 00:00:49Z)
+City labels : gluetun snapshot 2026-08-06 04:33 UTC
+Cities: Chicago, Fargo   SweepSubnets: False   Traceroute: False
+Endpoints: 980  reachable: 896
+Sources: official-subnet=55  official-city=921  official-city+manual=4
